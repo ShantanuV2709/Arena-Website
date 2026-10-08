@@ -1,0 +1,106 @@
+/* Arena Animation Geeta Bhawan — Custom Styles */
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
+img { display: block; max-width: 100%; }
+
+/* ── Placeholder labels (hidden once real image loads) ── */
+.placeholder-label { pointer-events: none; transition: opacity 0.3s; }
+img:not([src=""]):not([src*="placeholder"]) + .placeholder-label { opacity: 0; }
+
+/* ── Hero Slider ── */
+#hero-track { display: flex; will-change: transform; }
+.hero-slide { flex-shrink: 0; width: 100%; }
+
+/* ── FAQ accordion smooth height ── */
+.faq-body { transition: max-height 0.35s ease, padding 0.2s ease; }
+.faq-body.open { max-height: 500px !important; }
+.faq-icon.open { transform: rotate(180deg); }
+
+/* ── Hover lift utility ── */
+.hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
+/* ── Counter animation ── */
+.counter-val { transition: color 0.3s; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0f2f5; }
+::-webkit-scrollbar-thumb { background: #E8450A; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #C93A08; }
+
+/* ── Navbar scroll shadow ── */
+#navbar.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+
+/* ── Mobile menu animation ── */
+#mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+
+/* ── Team card aspect ratio fallback ── */
+.team-photo-wrap { position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 1rem; background: #1f2937; }
+
+/* ── Selection color ── */
+::selection { background: #E8450A; color: #fff; }
+
+/* ── Focus rings ── */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #E8450A;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Fade-in on scroll ── */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Section title underline ── */
+.section-title-line {
+  display: inline-block;
+  position: relative;
+}
+.section-title-line::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; left: 0;
+  width: 48px; height: 3px;
+  background: #E8450A;
+  border-radius: 9999px;
+}
+
+/* ── Orange button glow on hover ── */
+.btn-orange-glow:hover {
+  box-shadow: 0 8px 24px rgba(232, 69, 10, 0.4);
+}
+
+/* ── Print: hide non-essential ── */
+@media print {
+  nav, footer, #whatsapp-float, .hero-dot, #hero-prev, #hero-next { display: none !important; }
+}
+
+/* ── Navbar underline animation ── */
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #E8450A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
