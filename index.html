@@ -93,43 +93,59 @@
       </div>
     </div>
   </div>
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden hidden bg-navy border-t border-white/10 px-4 pb-4">
-    <div class="flex flex-col gap-1 pt-2">
-      <a href="index.html"  class="text-white font-medium py-3 px-3 rounded-lg hover:bg-white/10 text-sm border-b border-white/5">Home</a>
-      <a href="about.html"  class="text-white/80 font-medium py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white text-sm border-b border-white/5">Our Story</a>
-      <button id="mobile-services-btn" class="text-white/80 font-medium py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white text-sm flex items-center justify-between border-b border-white/5">
-        Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-[100] bg-white flex flex-col h-[100dvh] overflow-y-auto w-full">
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+      <span class="font-bold text-lg text-gray-900">Arena Animation</span>
+      <button id="mobile-close-btn" class="p-2 text-gray-500 hover:text-gray-900" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <div id="mobile-services-sub" class="hidden bg-white/5 rounded-xl ml-3 mb-1">
-        <a href="animation-programs.html"        class="block text-white/70 hover:text-white py-2 px-4 text-sm">Animation</a>
-        <a href="vfx-compositing.html"              class="block text-white/70 hover:text-white py-2 px-4 text-sm">VFX</a>
-        <a href="game-design.html"           class="block text-white/70 hover:text-white py-2 px-4 text-sm">Gaming / AR-VR</a>
-        <a href="web-ui-ux.html"             class="block text-white/70 hover:text-white py-2 px-4 text-sm">UI UX Design</a>
-        <a href="services.html#webdev"           class="block text-white/70 hover:text-white py-2 px-4 text-sm">Web Development</a>
-        <a href="digital-marketing.html" class="block text-white/70 hover:text-white py-2 px-4 text-sm">Digital Marketing</a>
-        <a href="web-ui-ux.html"    class="block text-white/70 hover:text-white py-2 px-4 text-sm">Digital Design</a>
+    </div>
+    <div class="flex flex-col px-6 py-4">
+      <a href="index.html" class="text-gray-900 font-bold py-3 text-[15px]">Home</a>
+      <a href="about.html" class="text-gray-900 font-bold py-3 text-[15px]">Our Story</a>
+      <div class="py-3">
+        <span class="text-gray-900 font-bold text-[15px]">Services</span>
+        <div class="flex flex-col mt-4 space-y-4">
+          <a href="digital-marketing.html" class="text-orange text-[13px] font-semibold pl-4 border-l-2 border-orange/20">Digital Marketing & Broadcast</a>
+          <a href="web-ui-ux.html" class="text-orange text-[13px] font-semibold pl-4 border-l-2 border-orange/20">Web & UI-UX Design</a>
+          <a href="game-design.html" class="text-orange text-[13px] font-semibold pl-4 border-l-2 border-orange/20">Game Design & Development</a>
+          <a href="vfx-compositing.html" class="text-orange text-[13px] font-semibold pl-4 border-l-2 border-orange/20">VFX & Compositing Courses</a>
+          <a href="animation-programs.html" class="text-orange text-[13px] font-semibold pl-4 border-l-2 border-orange/20">Animation Programs</a>
+        </div>
       </div>
-      <a href="contact.html" class="text-white/80 font-medium py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white text-sm border-b border-white/5">Get In Touch</a>
-      <a href="careers.html" class="text-white/80 font-medium py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white text-sm">Careers</a>
-      <a href="tel:+919826494824" class="mt-2 flex items-center justify-center gap-2 bg-orange text-white font-semibold py-3 px-4 rounded-xl text-sm hover:bg-orange-hover transition-colors">+919826494824</a>
+      <a href="contact.html" class="text-gray-900 font-bold py-3 text-[15px]">Get In Touch</a>
+      <a href="careers.html" class="text-gray-900 font-bold py-3 text-[15px]">Careers</a>
+      
+      <div class="mt-8 pt-6 flex flex-col gap-5">
+        <a href="tel:+919826494824" class="flex items-center gap-3 text-gray-600 text-sm font-medium">
+          <i class="bi bi-telephone text-gray-400"></i> +919826494824
+        </a>
+        <a href="mailto:info@indorearena.com" class="flex items-center gap-3 text-gray-600 text-sm font-medium">
+          <i class="bi bi-envelope text-gray-400"></i> info@indorearena.com
+        </a>
+      </div>
+      
+      <a href="https://api.whatsapp.com/send/?phone=919826394824&text&type=phone_number&app_absent=0" class="mt-10 inline-flex items-center justify-center gap-2 bg-white border border-gray-200 text-[#25D366] font-semibold py-2.5 px-5 rounded-full text-[13px] shadow-sm self-start hover:bg-gray-50 transition-colors">
+        <i class="bi bi-whatsapp text-lg"></i> Need Help? Chat with us
+      </a>
     </div>
   </div>
 </nav>
 
 <!-- HERO CAROUSEL -->
-<section id="hero" class="relative w-full overflow-hidden h-[400px] lg:h-[420px]">
+<section id="hero" class="relative w-full overflow-hidden h-[500px] sm:h-[450px] lg:h-[450px]">
   <div id="hero-track" class="flex h-full transition-transform duration-700 ease-in-out will-change-transform">
 
     <div class="hero-slide relative flex-shrink-0 w-full h-full">
       <div class="absolute inset-0 overflow-hidden bg-slate-800">
         <img src="assets/images/IMG_6470.JPG.jpeg" alt="Hero 1" class="w-full h-full object-cover"/>
       </div>
-      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8">
-        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 max-w-xl shadow-2xl">
-          <h1 class="text-[34px] font-bold text-[#111215] leading-tight mb-4">India&rsquo;s Leading Institute for Animation, VFX, Gaming, UI/UX, GenAI &amp; Design Training with Placement Assistance</h1>
-          <p class="text-sm text-gray-600 italic mb-6">"We are offering expert media and entertainment courses since 1997"</p>
-          <div class="flex flex-wrap gap-3">
+      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
+        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-5 sm:p-8 lg:p-10 max-w-xl shadow-2xl w-full">
+          <h1 class="text-[26px] sm:text-[34px] font-bold text-[#111215] leading-tight mb-4">India&rsquo;s Leading Institute for Animation, VFX, Gaming, UI/UX, GenAI &amp; Design Training with Placement Assistance</h1>
+          <p class="text-xs sm:text-sm text-gray-600 italic mb-5 sm:mb-6">"We are offering expert media and entertainment courses since 1997"</p>
+          <div class="flex flex-wrap gap-2 sm:gap-3">
             <a href="tel:+919826494824" class="px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-orange hover:bg-orange-hover transition-all duration-200 shadow-lg hover:-translate-y-0.5">Book career Counselling</a>
             <a href="contact.html" class="px-6 py-2.5 rounded-full text-sm font-semibold text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-200 hover:-translate-y-0.5">Enquiry</a>
           </div>
@@ -141,11 +157,11 @@
       <div class="absolute inset-0 overflow-hidden bg-slate-700">
         <img src="assets/images/IMG_6477.JPG.jpeg" alt="Hero 2" class="w-full h-full object-cover"/>
       </div>
-      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8">
-        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 max-w-xl shadow-2xl">
-          <h1 class="text-[34px] font-bold text-[#111215] leading-tight mb-4">Transform Your Passion into a Rewarding Career in Media &amp; Entertainment</h1>
-          <p class="text-sm text-gray-600 italic mb-6">"Industry-aligned curriculum with hands-on studio experience"</p>
-          <div class="flex flex-wrap gap-3">
+      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
+        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-5 sm:p-8 lg:p-10 max-w-xl shadow-2xl w-full">
+          <h1 class="text-[26px] sm:text-[34px] font-bold text-[#111215] leading-tight mb-4">Transform Your Passion into a Rewarding Career in Media &amp; Entertainment</h1>
+          <p class="text-xs sm:text-sm text-gray-600 italic mb-5 sm:mb-6">"Industry-aligned curriculum with hands-on studio experience"</p>
+          <div class="flex flex-wrap gap-2 sm:gap-3">
             <a href="contact.html" class="px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-orange hover:bg-orange-hover transition-all duration-200 shadow-lg hover:-translate-y-0.5">Contact Us</a>
           </div>
         </div>
@@ -156,11 +172,11 @@
       <div class="absolute inset-0 overflow-hidden bg-slate-900">
         <img src="assets/images/IMG_6479.JPG.jpeg" alt="Hero 3" class="w-full h-full object-cover"/>
       </div>
-      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8">
-        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 max-w-xl shadow-2xl">
-          <h1 class="text-[34px] font-bold text-[#111215] leading-tight mb-4">29 Years of Excellence in Creative Education &mdash; Join 20,000+ Alumni</h1>
-          <p class="text-sm text-gray-600 italic mb-6">"Walt Disney, ILM, Yash Raj Films &mdash; where our alumni work"</p>
-          <div class="flex flex-wrap gap-3">
+      <div class="absolute inset-y-0 left-0 right-0 w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
+        <div class="bg-white/65 backdrop-blur-sm rounded-2xl p-5 sm:p-8 lg:p-10 max-w-xl shadow-2xl w-full">
+          <h1 class="text-[26px] sm:text-[34px] font-bold text-[#111215] leading-tight mb-4">29 Years of Excellence in Creative Education &mdash; Join 20,000+ Alumni</h1>
+          <p class="text-xs sm:text-sm text-gray-600 italic mb-5 sm:mb-6">"Walt Disney, ILM, Yash Raj Films &mdash; where our alumni work"</p>
+          <div class="flex flex-wrap gap-2 sm:gap-3">
             <a href="contact.html" class="px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-orange hover:bg-orange-hover transition-all duration-200 shadow-lg hover:-translate-y-0.5">Contact Us</a>
           </div>
         </div>
@@ -612,10 +628,10 @@
         </div>
       </div>
 
-      <div class="bg-[#f05a28] rounded-2xl p-6 flex flex-col justify-between h-full text-left">
-        <h3 class="text-[28px] font-bold text-white leading-tight tracking-tight mt-2">Learn from<br>industry<br>mentors</h3>
-        <a href="about.html" class="inline-flex items-center self-start bg-[#1C2024] text-white font-bold text-sm px-6 py-2.5 rounded-full hover:bg-black transition-colors mt-8">
-          Enroll Now <span class="ml-2">&rarr;</span>
+      <div class="bg-[#f05a28] rounded-2xl p-4 sm:p-6 flex flex-col justify-between h-full text-left">
+        <h3 class="text-xl sm:text-[28px] font-bold text-white leading-tight tracking-tight mt-1 sm:mt-2">Learn from<br>industry<br>mentors</h3>
+        <a href="about.html" class="inline-flex items-center self-start bg-[#1C2024] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-black transition-colors mt-6 sm:mt-8">
+          Enroll Now <span class="ml-1.5 sm:ml-2">&rarr;</span>
         </a>
       </div>
 
