@@ -19,7 +19,7 @@
             bodybg: "#F8FAFC", /* Slightly lighter than home for inner pages */
             cardbg: "#FFFFFF"
           },
-          fontFamily: { sans: ["Plus Jakarta Sans","sans-serif"] }
+          fontFamily: { sans: ["Inter","sans-serif"] }
         }
       }
     };
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body class="font-sans bg-bodybg text-gray-900 antialiased flex flex-col min-h-screen">
+<body class="font-sans bg-bodybg text-gray-900 antialiased text-[14px] flex flex-col min-h-screen">
 
 <!-- TOP INFO BAR -->
 <div class="bg-gray-100 border-b border-gray-200 text-xs text-gray-600 py-1.5 px-4">
@@ -119,20 +119,20 @@
 <main class="flex-grow">
 
 <!-- TOP BANNER (Light Gradient) -->
-<section class="bg-gradient-to-b from-gray-50 to-gray-200 py-16 sm:py-20 text-center border-b border-gray-200">
-  <div class="max-w-4xl mx-auto px-4">
+<section class="bg-gradient-to-b from-[#FDEEE7] to-transparent pt-16 pb-12 mb-12 text-center">
+  <div class="w-full max-w-[1320px] mx-auto px-4 xl:px-3 text-center">
     <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">Get In <span class="text-orange">Touch</span></h1>
-    <p class="text-gray-500 text-sm font-medium">Home / <span class="text-orange">Contact us</span></p>
+    <p class="text-gray-500 text-sm">Home / <span class="text-[#F26522]">Contact us</span></p>
   </div>
 </section>
 
 <!-- CONTACT SECTION -->
-<section class="py-16 bg-bodybg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+<section class="pb-16 bg-bodybg">
+  <div class="w-full max-w-[1320px] mx-auto px-4 xl:px-3">
+    <div class="flex flex-col lg:flex-row items-start lg:-mx-6">
       
       <!-- Left: Contact Details & Map -->
-      <div class="w-full lg:w-1/3 flex flex-col gap-8">
+      <div class="w-full lg:w-1/3 flex flex-col gap-8 lg:px-6">
         
         <div class="flex items-center gap-4 border-b border-gray-200 pb-6">
           <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -167,15 +167,19 @@
         </div>
 
         <div class="mt-4 rounded-2xl overflow-hidden shadow-md h-64 bg-gray-200 relative">
-          <!-- Real map embed can go here. For now, an image placeholder -->
-          <img src="assets/images/map.png" alt="Map Location" class="w-full h-full object-cover"/>
-          <div class="placeholder-label absolute inset-0 flex items-center justify-center text-gray-500 text-sm">map.png</div>
+          <iframe 
+            src="https://maps.google.com/maps?q=22.7183,75.8843&z=17&output=embed" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
 
       </div>
 
       <!-- Right: Contact Form -->
-      <div class="w-full lg:w-2/3">
+      <div class="w-full lg:w-2/3 lg:px-6">
         <h2 class="text-3xl font-black text-gray-900 mb-2">Drop us a line</h2>
         <p class="text-gray-500 text-sm mb-8">Have a question or comment? Use the form below to send us a message</p>
         
@@ -281,12 +285,12 @@
     <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-white/30 text-xs">© 2026 Arena Animation. All rights reserved. - Powered by StoreHippo</p>
       <div class="flex items-center gap-3">
-        <a href="#" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-youtube"></i></a>
-        <a href="#" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://wa.me/919826494824" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-[#25D366] text-white/50 hover:text-[#25D366] flex items-center justify-center transition-all"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/geetabhawanarena/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/arenageetabhawan" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/arenagbs" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-youtube"></i></a>
+        <a href="https://linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Farena-animation-geeta-bhawan-square-indore%2Fposts%2F%3FfeedView%3Dall" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/Arena_Indore?s=20" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-orange text-white/50 hover:text-orange flex items-center justify-center transition-all"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=919826394824&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-white/20 hover:border-[#25D366] text-white/50 hover:text-[#25D366] flex items-center justify-center transition-all"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
