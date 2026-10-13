@@ -52,33 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu        = document.getElementById('mobile-menu');
   const hamIcon           = document.getElementById('ham-icon');
   const closeIcon         = document.getElementById('close-icon');
-  const mobileServicesBtn = document.getElementById('mobile-services-btn');
-  const mobileServicesSub = document.getElementById('mobile-services-sub');
+  const mobileCloseBtn    = document.getElementById('mobile-close-btn');
 
   if (hamburgerBtn && mobileMenu) {
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      hamIcon   && hamIcon.classList.remove('hidden');
+      closeIcon && closeIcon.classList.add('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+
     hamburgerBtn.addEventListener('click', () => {
       const isOpen = !mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden', isOpen);
-      hamIcon   && hamIcon.classList.toggle('hidden', !isOpen);
-      closeIcon && closeIcon.classList.toggle('hidden', isOpen);
-      hamburgerBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    // Close on outside click
-    document.addEventListener('click', e => {
-      if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        hamIcon   && hamIcon.classList.remove('hidden');
-        closeIcon && closeIcon.classList.add('hidden');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamIcon   && hamIcon.classList.add('hidden');
+        closeIcon && closeIcon.classList.remove('hidden');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
       }
     });
-  }
 
-  if (mobileServicesBtn && mobileServicesSub) {
-    mobileServicesBtn.addEventListener('click', () => {
-      mobileServicesSub.classList.toggle('hidden');
-    });
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', closeMenu);
+    }
   }
 
   // ── 3. STICKY NAVBAR SHADOW ───────────────────────────────────────────────
